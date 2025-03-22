@@ -1,0 +1,307 @@
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+    background-color: #FFFAE6;
+    overflow-x: hidden;
+
+
+}
+
+header {
+    background-color: #FF5F00;
+    color: #FFFAE6;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header i.fa-bars {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    animation: moveHeading 2s infinite alternate;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes moveHeading {
+    0% {
+        transform: translate(-50%, -50%) translateX(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translateX(20px);
+    }
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Sidebar Styles */
+aside {
+    width: 0;
+    background-color: #333;
+    color: #fff;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    position: fixed; 
+    top: 54px;
+    left: 0;
+    height: 100vh;
+    z-index: 100;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+aside.active {
+    width: 15%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    border: #333 solid 3px;
+
+}
+
+nav ul li i {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    visibility: visible;
+    color: #FF5F00;
+    transition: color 0.3s ease;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    visibility: hidden;
+    opacity: 0;
+    margin-left: 10px;
+    font-size: 1rem;
+    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, font-size 0.5s ease-in-out;
+}
+
+aside.active nav ul li a {
+    visibility: visible;
+    opacity: 1;
+    font-size: 1.1rem;
+}
+
+#sidebar nav ul li a:hover {
+    color: #FF5F00;
+
+}
+
+.container {
+    transition: margin-left 0.3s ease-in-out;
+
+}
+
+section {
+    text-align: center;
+    justify-content: center;
+    flex: 1;
+    background-color: #FF9F66;
+    padding: 30px;
+    width: 55%;
+    margin: 5% auto;
+    border-radius: 10px;
+    box-shadow: #616161 2px 2px 5px;
+
+}
+
+.vehicles-container {
+    background-color: bisque;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    border-radius: 7px;
+    box-shadow: #333 2px 2px 5px;
+    padding: 10px;
+}
+
+
+
+.vehicles-container p {
+    justify-content: center;
+    text-align: center;
+    width: 75%;
+    margin: 5px auto;
+    padding: 10px;
+    border: bisque solid 2px;
+    border-radius: 5px;
+    margin: 10px auto;
+
+
+}
+
+.vehicles-container button {
+    background-color: #087fb6;
+    color: #FFFAE6;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 1.5rem;
+    transition: transform 1s ease, background-color 0.3s ease-out;
+}
+
+.vehicles-container button:hover {
+    background-color: #087fb6;
+    color: #FFFAE6;
+    transform: rotate(1800deg);
+}
+
+aside.active+section {
+    margin-left: 15%;
+}
+
+
+.lesson {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.vehicles-container-info {
+    width: 100%;
+    /* display: grid; */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 20px;
+    align-items: center;
+
+}
+
+.vehicle {
+    width: 250px;
+    background-color: bisque;
+    padding: 5px;
+    border: bisque solid 2px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    /* Center-align text and images */
+}
+.vehicle:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.vehicle img {
+    width: 78%;
+    /* Set a fixed width for images */
+    height: 12em;
+    /* Set a fixed height for images */
+    border-radius: 10px;
+    /* Rounded corners for images */
+    object-fit: cover;
+    /* Ensure images cover the area without distortion */
+}
+
+.vehicle p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.lesson button {
+    background-color: #087fb6;
+    color: #FFFAE6;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 1.5rem;
+    transition: transform 1s ease, background-color 0.3s ease-out;
+}
+
+.lesson button:hover {
+    background-color: #087fb6;
+    color: #FFFAE6;
+    transform: rotate(1800deg);
+}
+
+aside.active+.lesson {
+    margin-left: 15%;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.lessonPic{
+   
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+        aside.active {
+        width: 200px; /* Adjust width for smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+

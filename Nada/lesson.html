@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="lessonCSS.css">
+        <link rel="icon" type="image/x-icon" href="resources/ABC.jpg">
+        <title>Fun Learning</title>
+    </head>
+
+    <body>
+        <header>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <h1 id="moving-heading">Vehicles</h1>
+        </header>
+        <main>
+            <aside id="sidebar">
+                <nav>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-house-user"></i>
+                            <a href="../home/home.html">Home</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-seedling"></i>
+                            <a href="../fruit/fruit.html">Fruit Games</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-child-reaching"></i>
+                            <a href="../BodyGame/HumanBody.html">Body </a>
+                        </li>
+                        <!-- <li>
+                        <i class="fa-solid fa-truck-plane"></i>
+                        <a href="../Nada/lesson.html">Vehicles </a>
+                    </li> -->
+                        <li>
+                            <i class="fa-solid fa-otter"></i>
+                            <a href="../Animal/Leason.html">Animals </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <a href="../HiddenGame/index1.html">Hidden </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-address-card"></i>
+                            <a href="../Nada/About.html">About Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="container">
+                <section class="intro">
+                    <div class="vehicles-container">
+                        <p>At the begining we will show you the pictures of the
+                            vehicles and there name under them to know there
+                            shapes and there names if you click in the photo the
+                            sound will play after you know them you have
+                            to play with us </p>
+                        <p>the play is matching the correct name of the vehicles
+                            that
+                            in the pictures</p>
+                        <button id="startLessonBtn"
+                            onclick="startLesson()">Start lesson</button>
+                    </div>
+                </section>
+                <section class="hidden lesson">
+                    <div class="vehicles-container-info">
+                        <div class="lessonPic">
+                            <div class="vehicle" onclick="playAudio('bus')">
+                                <img src="resources/bus-svgrepo-com.svg"
+                                    alt="bus">
+                                <p>Bus</p>
+                            </div>
+                            <div class="vehicle" onclick="playAudio('bike')">
+                                <img src="resources/bike-svgrepo-com.svg"
+                                    alt="bike">
+                                <p>Bike</p>
+                            </div>
+                            <div class="vehicle" onclick="playAudio('train')">
+                                <img src="resources/train-svgrepo-com.svg"
+                                    alt="train">
+                                <p>Train</p>
+                            </div>
+                            <div class="vehicle" onclick="playAudio('car')">
+                                <img
+                                    src="resources/car-transport-svgrepo-com.svg"
+                                    alt="car">
+                                <p>Car</p>
+                            </div>
+                            <div class="vehicle" onclick="playAudio('plane')">
+                                <img src="resources/plane-svgrepo-com.svg"
+                                    alt="plane">
+                                <p>Plane</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="True Exam.html" target="_self"><button
+                                    id="startPlayBtn">Start
+                                    Play</button></a>
+                        </div>
+
+                    </div>
+                </section>
+
+                <div class="overlay"></div>
+            </main>
+
+            <script src="lesson.js"></script
+    </body>
+</html>

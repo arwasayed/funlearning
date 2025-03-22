@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Scientist</title>
+    <link rel="stylesheet" href="NadaCss.css">    
+    <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+            <link rel="icon" type="image/x-icon" href="resources/ABC.jpg" >
+        <title>Fun Learning</title>
+</head>
+
+<body>
+    <header>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <h1 id="moving-heading">Vehicles</h1>
+    </header>
+    
+    <aside id="sidebar">
+        <nav>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-house-user"></i>
+                    <a href="../home/home.html">Home</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-seedling"></i>
+                    <a href="../fruit/fruit.html">Fruit Games</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-child-reaching"></i>
+                    <a href="../BodyGame/HumanBody.html">Body </a>
+                </li>
+                <!-- <li>
+                <i class="fa-solid fa-truck-plane"></i>
+                <a href="../Nada/lesson.html">Vehicles </a>
+            </li> -->
+                <li>
+                    <i class="fa-solid fa-otter"></i>
+                    <a href="../Animal/Leason.html">Animals </a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a href="../HiddenGame/index1.html">Hidden </a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-address-card"></i>
+                    <a href="../Nada/About.html">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="allExams">
+
+        <div class="exams">
+            <div class="exam" id="exam1">
+                <!-- car -->
+                <div id="imgDiv">
+                    <img src="resources/car-transport-svgrepo-com.svg" alt="Car" onclick="play('car')">
+                </div>
+
+
+                <div class="name">
+                    <div id="letterC" class="letter" ondrop="drop(this)" ondragover="event.preventDefault();"></div>
+                    <div id="letterA" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                    <div id="letterR" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                </div>
+
+                <div id="letters1" class="letters" >
+                    <div id="R">
+                        <div id="R" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >R</p>
+                        </div>
+                    </div>
+                    <div id="C" >
+                        <div id="C" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p>C</p>
+                        </div>
+                    </div>
+                    <div id="A" >
+                        <div id="A" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p>A</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <div class="exam" id="exam2">
+                <!-- train -->
+                <div id="imgDiv">
+                    <img src="resources/train-svgrepo-com.svg" alt="Car" onclick="play('train')">
+                </div>
+
+                <div class="name">
+                    <div id="letterT" class="letter" ondrop="drop(this)" ondragover="event.preventDefault();"></div>
+                    <div id="letterR" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                    <div id="letterA" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                    <div id="letterI" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                    <div id="letterN" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                </div>
+
+                <div id="letters2" class="letters" >
+
+                    <div id="R">
+                        <div id="R" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >R</p>
+                        </div>
+                    </div>
+                    <div id="N">
+                        <div id="N" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >N</p>
+                        </div>
+                    </div>
+                    <div id="A">
+                        <div id="A" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >A</p>
+                        </div>
+                    </div>
+                    <div id="T">
+                        <div id="T" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >T</p>
+                        </div>
+                    </div>
+                    <div id="I">
+                        <div id="I" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >I</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="exam" id="exam3">
+                <!-- bus -->
+                <div id="imgDiv">
+                    <img src="resources/bus-svgrepo-com.svg" alt="Car" onclick="play('bus')">
+                </div>
+
+                <div class="name">
+                    <div id="letterB" class="letter" ondrop="drop(this)" ondragover="event.preventDefault();"></div>
+                    <div id="letterU" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                    <div id="letterS" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                </div>
+
+                <div id="letters3" class="letters" ondrop="drop(this)" ondragover="event.preventDefault();">
+                    <div id="U">
+                        <div id="U" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >U</p>
+                        </div>
+                    </div>
+                    <div id="S">
+                        <div id="S" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >S</p>
+                        </div>
+                    </div>
+                    <div id="B">
+                        <div id="B" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >B</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam" id="exam4">
+                <!-- plane -->
+                <div id="imgDiv">
+                    <img src="resources/plane-svgrepo-com.svg" alt="Car" onclick="play('plane')">
+                </div>
+
+                <div class="name">
+                    <div id="letterP" class="letter" ondrop="drop(this)" ondragover="event.preventDefault();"></div>
+                    <div id="letterL" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                    <div id="letterA" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                    <div id="letterN" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                    <div id="letterE" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                </div>
+
+                <div id="letters4" class="letters" ondrop="drop(this)" ondragover="event.preventDefault();">
+                    <div id="A">
+                        <div id="A" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >A</p>
+                        </div>
+                    </div>
+                    <div id="P">
+                        <div id="P" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >P</p>
+                        </div>
+                    </div>
+                    <div id="E">
+                        <div id="E" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >E</p>
+                        </div>
+                    </div>
+                    <div id="L">
+                        <div id="L" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >L</p>
+                        </div>
+                    </div>
+                    <div id="N">
+                        <div id="N" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >N</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="exam" id="exam5">
+                <!-- bike -->
+                <div id="imgDiv">
+                    <img src="resources/bike-svgrepo-com.svg" alt="Car" onclick="play('bike')">
+                </div>
+
+                <div class="name">
+                    <div id="letterB" class="letter" ondrop="drop(this)" ondragover="event.preventDefault();"></div>
+                    <div id="letterI" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                    <div id="letterK" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                    <div id="letterE" class="letter" ondrop="drop(this)" ondragover="event.preventDefault()"></div>
+                </div>
+
+                <div id="letters5" class="letters" ondrop="drop(this)" ondragover="event.preventDefault();">
+                    <div id="K">
+                        <div id="K" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >K</p>
+                        </div>
+                    </div>
+                    <div id="E">
+                        <div id="E" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >E</p>
+                        </div>
+                    </div>
+                    <div id="I">
+                        <div id="I" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >I</p>
+                        </div>
+                    </div>
+                    <div id="B">
+                        <div id="B" class="Alpha" draggable="true" ondragstart="drag(this)">
+                            <p >B</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <input type="button" value="1" id="btn1" onclick="showExam(1)">
+            <input type="button" value="2" id="btn2" onclick="showExam(2)">
+            <input type="button" value="3" id="btn3" onclick="showExam(3)">
+            <input type="button" value="4" id="btn4" onclick="showExam(4)">
+            <input type="button" value="5" id="btn5" onclick="showExam(5)">
+        </div>
+        <input type="button" value="Reset" id="resetBtn" onclick="undo()">
+
+        
+
+    </div>
+    <div>
+        <audio src="resources/correct.mp3" id="correct"></audio>
+        <audio src="resources/fail-.mp3" id="fail"></audio>
+    </div>
+
+    <div id="message">
+        <p>Congratulations! You've completed all the exams!</p>
+    </div>
+
+
+<script src="NadaJS.js"></script>
+</body>
+
+</html>

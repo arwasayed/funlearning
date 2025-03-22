@@ -1,0 +1,280 @@
+/* Global Reset */
+body, h1, h2, p, ul, li, a {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: cursive;
+}
+
+/* Header Styles */
+header {
+    background-color: #FF5F00;
+    color: #333;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header i.fa-bars {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    animation: moveHeading 0.5s infinite alternate;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes moveHeading {
+    0% {
+        transform: translate(-50%, -50%) translateX(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translateX(20px);
+    }
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+/* Sidebar Styles */
+aside {
+    width: 0;
+    background-color: #333;
+    color: #fff;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    position: fixed;
+    height: 100vh;
+    z-index: 101;
+    /* Sidebar has higher z-index than overlay */
+}
+
+aside.active {
+    width: 15%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    border: #333 solid 3px;
+
+}
+
+nav ul li i {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    visibility: visible;
+    color: #FF5F00;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    visibility: hidden;
+    opacity: 0;
+    margin-left: 10px;
+    font-size: 1rem;
+    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, font-size 0.5s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #FF5F00;
+}
+
+aside.active nav ul li a {
+    visibility: visible;
+    opacity: 1;
+    font-size: 1.1rem;
+}
+
+/* Main Content Styles */
+section {
+    text-align: center;
+    flex: 1;
+    background-color: bisque;
+    padding: 20px;
+    width: 100%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+aside.active+section {
+    margin-left: 15%;
+}
+
+/* Games Section */
+#Games h2 {
+    display: inline-block;
+    box-shadow: 0 5px 10px #555;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #FF9F66;
+}
+
+.group-Games {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+}
+
+.img-Games {
+    background-color: #FF9F66;
+    box-shadow: 4px 0px 4px #555;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #FF9F66;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    max-width: 100%;
+}
+
+.img-Games:hover {
+    transform: scale(1.2);
+}
+
+.img-Games figure {
+    margin: 0;
+}
+
+.img-Games img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: inline-block;
+    height: 10em;
+    transition: transform 0.3s ease;
+}
+
+.img-Games:hover img {
+    transform: scale(1.1);
+}
+
+.img-Games figcaption {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.img-Games button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.img-Games button:hover {
+    background-color: #555;
+}
+
+.group-Games .img-Games:last-child:nth-child(3n + 1) {
+    text-align: center;
+    justify-content: center;
+    grid-column: 2;
+}
+
+.Carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+}
+
+/* Overlay Styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    /* Overlay has lower z-index than sidebar */
+}
+
+.overlay.active {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    order: 100;
+    background-color: #FF5F00;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    aside.active {
+        width: 40%;
+    }
+
+    aside.active+section {
+        margin-left: 40%;
+    }
+
+    .group-Games {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    aside.active {
+        width: 40%;
+    }
+
+    aside.active+section {
+        margin-left: 40%;
+    }
+
+    .group-Games {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+}
