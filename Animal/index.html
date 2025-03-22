@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Fun Learning</title>
+        <link rel="icon" href="Imges/icon.jpeg" type="image/x-icon">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+
+        <header>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <h1 id="moving-heading">Fun Animal Quiz!🐾 </h1>
+            <div class="emoji-feedback">😊</div>
+        </header>
+        <main>
+            <aside id="sidebar">
+                <nav>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-house-user"></i>
+                            <a href="../home/home.html">Home</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-seedling"></i>
+                            <a href="../fruit/fruit.html">Fruit Games</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-child-reaching"></i>
+                            <a href="../BodyGame/HumanBody.html">Body </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-truck-plane"></i>
+                            <a href="../Nada/lesson.html">Transfer </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-otter"></i>
+                            <a href="../Animal/Leason.html">Animals </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <a href="../HiddenGame/index1.html">Hidden </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="container">
+
+                <div class="question-content">
+                    <div class="audio-container">
+                        <button id="playSound"
+                            class="audio-button">Play</button>
+                        <div class="visualizer"></div>
+                    </div>
+                    <img id="questionImage" class="question-image">
+                    <div id="questionText" class="question-text"></div>
+                </div>
+
+                <div class="options" id="options"></div>
+                <div class="score">Score: <span id="score">0</span> 🌟</div>
+            </div>
+            <div class="overlay"></div>
+        </main>
+
+        <script src="Script.js"></script>
+        <script src="animal.js"></script>
+
+    </body>
+</html>

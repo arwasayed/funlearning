@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="fruit.css">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <title>Fun Learning</title>
+    </head>
+    <body>
+        <header>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <h1 id="moving-heading">Learn Fruit</h1>
+        </header>
+        <main>
+            <aside id="sidebar">
+                <nav>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-house-user"></i>
+                            <a href="../home/home.html">Home</a>
+                        </li>
+                        <!-- <li>
+                            <i class="fa-solid fa-seedling"></i>
+                            <a href="../fruit/fruit.html">Fruit </a>
+                        </li> -->
+                        <li>
+                            <i class="fa-solid fa-child-reaching"></i>
+                            <a href="../BodyGame/HumanBody.html">Body </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-truck-plane"></i>
+                            <a href="../Nada/lesson.html">Vehicles </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-otter"></i>
+                            <a href="../fruit/fruit.html">Animal </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <a href="../HiddenGame/index1.html">Hidden </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-address-card"></i>
+                            <a href="../Nada/About.html">About Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="container">
+                <section class="intro">
+                    <div class="fruit-container">
+                        <p>At the begining we will show you the pictures of the
+                            fruits and there name under them to know there
+                            shapes and there names if you click in the photo the
+                            sound will play after you know them you have
+                            to play with us </p>
+                        <p>the play is choose the correct name of the fruit that
+                            in the pictures</p>
+                        <button id="startLessonBtn"
+                            onclick="startLesson()"><span class="button-text">
+                                Start lesson</span></button>
+                    </div>
+                </section>
+                <section class="hidden lesson">
+                    <div class="fruit-container-info">
+                        <div class="fruit">
+                            <img src="apple.jpg" alt="apple">
+                            <p>Apple</p>
+                        </div>
+                        <div class="fruit">
+                            <img src="banana.jpg" alt="banana">
+                            <p>Banana</p>
+                        </div>
+                        <div class="fruit">
+                            <img src="orange.jpg" alt="orange">
+                            <p>Orange</p>
+                        </div>
+                        <div class="fruit">
+                            <img src="strawberry.jpg" alt="strawberry">
+                            <p>Strawberry</p>
+                        </div>
+                        <div class="fruit">
+                            <img src="grapes.jpg" alt="grapes">
+                            <p>Grapes</p>
+                        </div>
+                        <div class="fruit">
+                            <img src="mango.jpg" alt="mango">
+                            <p>Mango</p>
+                        </div>
+                        <div class="fruit">
+                            <img src="pineapple.jpg" alt="pear">
+                            <p>Pear</p>
+                        </div>
+                        <div class="fruit">
+                            <img src="watermelon.jpg" alt="watermelon">
+                            <p>Watermelon</p>
+                        </div>
+                    </div>
+                    <button id="startPlayBtn" onclick="startPlay()"><span
+                            class="button-text">Start
+                            Play</span></button>
+                </section>
+                <section class="hidden hidden1">
+                    <div class="game">
+                        <h2>What is the name of this fruit?</h2>
+                        <img id="image" src alt="Random Image"
+                            style="width: 150px; height: 150px; margin: 10px auto; display: block;">
+                        <p>Time left: <span id="timer">20</span> seconds</p>
+                        <div class="options" id="options"></div>
+                        <p>Score: <span id="score">0</span></p>
+                        <div id="dots-container"></div>
+                        <!-- Container for dots -->
+                        <button id="nextQuestionBtn">Next Question</button>
+                        <button id="endGameBtn">End Game</button>
+                    </div>
+                </section>
+            </div>
+
+            <div class="overlay"></div>
+        </main>
+        <footer>
+            <p>&copy; 2025 Games Open Source</p>
+        </footer>
+
+        <script src="fruit.js"></script>
+    </body>
+</html>

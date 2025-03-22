@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="HumanBody.css">
+        <link rel="icon" type="icon/png"
+            href="favicon.jpg">
+        <title> Baby Sien</title>
+    </head>
+    <body>
+        <header>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <h1 id="moving-heading">Learn Human Body</h1>
+        </header>
+        <main>
+
+            <aside id="sidebar">
+                <nav>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-house-user"></i>
+                            <a href="../home/home.html">Home</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-seedling"></i>
+                            <a href="../fruit/fruit.html">Fruit </a>
+                        </li>
+                        <!-- <li>
+                            <i class="fa-solid fa-child-reaching"></i>
+                            <a href="HumanBody.html">Body </a>
+                        </li> -->
+                        <li>
+                            <i class="fa-solid fa-truck-plane"></i>
+                            <a href="../Nada/lesson.html">Vehicles </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-otter"></i>
+                            <a href="../Animal/Leason.html">Animals </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <a href="../HiddenGame/index1.html">Hidden </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-address-card"></i>
+                            <a href="../Nada/About.html">About Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="container">
+                <section class="intro">
+                    <div class="fruit-container">
+                        <p>At the beginning, we will show you pictures of
+                            different parts of the human body, and the names
+                            under them to help you learn about their shapes and
+                            functions. If you click on the picture, a sound will
+                            play to help you learn better.</p>
+                        <p>After you've learned them, you will play the
+                            "Body Parts Challenge" by choosing the correct word
+                            and placing it in the right spot on the body.</p>
+                        <button id="startLessonBtn"
+                            onclick="startLesson()">Start lesson</button>
+                    </div>
+                </section>
+                <section class="hidden lesson">
+                    <div class="fruit-container-info">
+                        <div class="fruit"
+                            onclick="playSound('Sound/head.mp3')">
+                            <img src="head.jpg" alt="head">
+                            <p>Head</p>
+                        </div>
+                        <div class="fruit" onclick="playSound('Sound/eye.mp3')">
+                            <img src="eye.jpg" alt="eye">
+                            <p>Eye</p>
+                        </div>
+                        <div class="fruit"
+                            onclick="playSound('Sound/foot.mp3')">
+                            <img src="foot.jpg" alt="foot">
+                            <p>Foot</p>
+                        </div>
+                        <div class="fruit"
+                            onclick="playSound('Sound/hand.mp3')">
+                            <img src="hand.jpg" alt="hand">
+                            <p>Hand</p>
+                        </div>
+                        <div class="fruit"
+                            onclick="playSound('Sound/mouth.mp3')">
+                            <img src="mouth.jpg" alt="mouth">
+                            <p>Mouth</p>
+                        </div>
+                        <div class="fruit" onclick="playSound('Sound/arm.mp3')">
+                            <img src="arm.jpg" alt="arm">
+                            <p>Arm</p>
+                        </div>
+                        <div class="fruit" onclick="playSound('Sound/leg.mp3')">
+                            <img src="leg (2).jpg" alt="knee">
+                            <p>Leg</p>
+                        </div>
+                        <div class="fruit"
+                            onclick="playSound('Sound/nostril.mp3')">
+                            <img src="nostril.jpg" alt="nostril">
+                            <p>Nostril</p>
+                        </div>
+                    </div>
+                    <button id="startPlayBtn" onclick="startPlay()">Start
+                        Play</button>
+                </section>
+
+                <section class="game-container hidden">
+                    <section class="image-container">
+                        <img id="bodyImage" src="human-body.jpg"
+                            alt="Human Body" width="400px">
+                        <div class="drop-zone" id="head" data-name="Head"></div>
+                        <div class="drop-zone" id="eye" data-name="Eye"></div>
+                        <div class="drop-zone" id="arm" data-name="Arm"></div>
+                        <div class="drop-zone" id="chest"
+                            data-name="Chest"></div>
+                        <div class="drop-zone" id="leg" data-name="Leg"></div>
+                    </section>
+
+                    <section class="word-box">
+                        <div class="word" id="headWord"
+                            draggable="true">Head</div>
+                        <div class="word" id="eyeWord"
+                            draggable="true">Eye</div>
+                        <div class="word" id="armWord"
+                            draggable="true">Arm</div>
+                        <div class="word" id="chestWord"
+                            draggable="true">Chest</div>
+                        <div class="word" id="legWord"
+                            draggable="true">Leg</div>
+                    </section>
+
+                    <section id="score" class="score">Score: 0</section>
+
+                    <section>
+                        <button id="retryButton" style="display:none;">Try
+                            Again</button>
+                    </section>
+                </section>
+            </div>
+            <div class="overlay"></div>
+        </main>
+
+        <script src="HumanBody.js"></script>
+    </body>
+</html>

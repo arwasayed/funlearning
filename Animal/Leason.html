@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="animal.css">
+        <title> Fun Learning</title>
+        <link rel="icon" href="Imges/icon.jpeg" type="image/x-icon">
+
+    </head>
+    <body>
+        <header>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <h1 id="moving-heading">Learn Animal</h1>
+        </header>
+        <main>
+            <aside id="sidebar">
+                <nav>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-house-user"></i>
+                            <a href="../home/home.html">Home</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-seedling"></i>
+                            <a href="../fruit/fruit.html">Fruit Games</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-child-reaching"></i>
+                            <a href="../BodyGame/HumanBody.html">Body </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-truck-plane"></i>
+                            <a href="../Nada/lesson.html">Vehicles </a>
+                        </li>
+                        <!-- <li>
+                            <i class="fa-solid fa-otter"></i>
+                            <a href="../Animal/Leason.html">Animals </a>
+                        </li> -->
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <a href="../HiddenGame/index1.html">Hidden </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-address-card"></i>
+                            <a href="../Nada/About.html">About Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="container">
+                <section class="intro">
+                    <div class="animal-container">
+                        <p>At the beginning, we will show you pictures of
+                            different animals along with their names under them.
+                            This will help you learn about their appearances and
+                            names. When you click on the picture, you will hear
+                            the sound of the animal. Once you are familiar with
+                            them, you can start playing with us!
+
+                        </p>
+                        <p>the play is choose the correct answer</p>
+                        <button id="startLessonBtn"
+                            onclick="startLesson()">Start lesson</button>
+                    </div>
+                </section>
+                <section class="hidden lesson">
+                    <div class="animal-container-info">
+                        <div class="animal"
+                            onclick="playSound1('Sound/Lion.mp3')">
+                            <img
+                                src="Imges/a-cute-cartoon-lion-walking-_10564205.png!w700wp.jpg"
+                                data-sound="lion1">
+                            <p class="name">Lion</p>
+                            <p class="desc"> known as the "King of the Jungle."
+                                Lions live in groups called prides.</p>
+                        </div>
+
+                        <div class="animal"
+                            onclick="playSound1('Sound/bear.mp3')">
+                            <img src="Imges/bear.png">
+                            <p class="name">Bear</p>
+                            <p class="desc"> A bear is a large animal with thick
+                                fur. It can be brown, black, or even white</p>
+
+                        </div>
+                        <div class="animal"
+                            onclick="playSound1('Sound/camel.mp3')">
+                            <img src="Imges/camel.png">
+                            <p class="name">Camel</p>
+                            <p class="desc"> A camel is a tall animal with long
+                                legs and a hump on its back. Camels can live in
+                                hot deserts and can go for many days without
+                                water. </p>
+
+                        </div>
+                        <div class="animal"
+                            onclick="playSound1('Sound/cat.mp3')">
+                            <img src="Imges/cat.png">
+                            <p class="name">Cat</p>
+                            <p class="desc">A cat is a small, soft animal with
+                                whiskers and a tail. Cats are very good at
+                                catching mice. </p>
+
+                        </div>
+                        <div class="animal"
+                            onclick="playSound1('Sound/dog.mp3')">
+                            <img src="Imges/dog.png">
+                            <p class="name">Dog</p>
+                            <p class="desc"> A dog is a friendly animal and
+                                often called "man's best friend." Dogs like to
+                                play, run, and fetch balls.</p>
+                        </div>
+                        <div class="animal"
+                            onclick="playSound1('Sound/fish.mp3')">
+                            <img src="Imges/fish.png">
+                            <p class="name">Fish</p>
+                            <p class="desc">A fish is an animal that lives in
+                                the water. It has scales and fins that help it
+                                swim. Fish come in many colors and shapes</p>
+                        </div>
+                        <div class="animal"
+                            onclick="playSound1('Sound/duck.mp3')">
+                            <img src="Imges/dug.png">
+                            <p class="name">Duck</p>
+                            <p class="desc"> A duck is a small bird that lives
+                                in water. It has webbed feet to swim and a soft,
+                                fluffy body. Ducks like to quack and can fly,
+                                but they spend a lot of time swimming.</p>
+                        </div>
+                        <div class="animal"
+                            onclick="playSound1('Sound/elephant.mp3')">
+                            <img src="Imges/elephant.png">
+                            <p class="name">ُElephant</p>
+                            <p class="desc">An elephant is a very large animal
+                                with big ears and a long trunk. Elephants are
+                                gentle and kind, and they live in groups called
+                                herds.</p>
+                        </div>
+                        <div class="animal"
+                            onclick="playSound1('Sound/wolf.mp3')">
+                            <img src="Imges/wolf.png">
+                            <p class="name">Wolf</p>
+                            <p class="desc">A wolf is a wild animal that lives
+                                in forests. Wolves are similar to dogs but are
+                                much larger. They hunt in groups called packs
+                                and communicate with howls.</p>
+                        </div>
+                        <div class="animal"
+                            onclick="playSound1('Sound/sheep.mp3')">
+                            <img src="Imges/sheep.png">
+                            <p class="name">Sheep</p>
+                            <p class="desc">A sheep is a fluffy animal that is
+                                often white. They have wool that people use to
+                                make clothes. Sheep like to stay in groups and
+                                eat grass.
+
+                            </p>
+                        </div>
+                        <div class="animal"
+                            onclick="playSound1('Sound/horse.mp3')">
+                            <img
+                                src="Imges/pngtree-cartoon-funny-horse-isolated-on-white-background-png-image_4859380.png"
+                                alt="watermelon">
+                            <p class="name">Horse</p>
+                            <p class="desc"> A horse is a tall animal with long
+                                legs and a flowing mane. Horses are fast runners
+                                and are used for riding and working.</p>
+                        </div>
+                        <div class="animal"
+                            onclick="playSound1('Sound/whale.mp3')">
+                            <img src="Imges/whale-shark.png">
+                            <p class="name">Whale</p>
+                            <p class="desc">A whale is the biggest animal in the
+                                ocean. It can be very large, and it swims by
+                                moving its tail.</p>
+                        </div>
+                    </div>
+                    <button id="startPlayBtn">Start Play</button>
+                </section>
+
+                <div class="overlay"></div>
+            </main>
+            <script>
+       
+    </script>
+            <script src="animal.js"></script>
+        </body>
+    </html>

@@ -1,0 +1,34 @@
+[
+    {
+        "name": "head",
+        "image": "head.jpg"
+    },
+    {
+        "name": "eye",
+        "image": "eye.jpg"
+    },
+    {
+        "name": "foot",
+        "image": "foot.jpg"
+    },
+    {
+        "name": "hand",
+        "image": "hand.jpg"
+    },
+    {
+        "name": "mouth",
+        "image": "mouth.jpg"
+    },
+    {
+        "name": "arm",
+        "image": "arm.jpg"
+    },
+    {
+        "name": "knee",
+        "image": "knee.jpg"
+    },
+    {
+        "name": "nostril",
+        "image": "nostril.jpg"
+    }
+]

@@ -1,0 +1,340 @@
+/* الكود الأساسي كما هو بدون تغيير */
+body {
+    position: relative;
+    margin: 0;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#FFFAE6;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 200; /* Higher than sidebar */
+    background-color: #FF5F00;
+    color: #FFFAE6;
+    padding: 2px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+header i.fa-bars {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    animation: moveHeading 0.5s infinite alternate;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes moveHeading {
+    0% { transform: translate(-50%, -50%) translateX(0); }
+    100% { transform: translate(-50%, -50%) translateX(20px); }
+}
+
+.container {
+    
+    background: #ff9e66e4;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 55%;
+
+    text-align: center;
+    justify-content: center;
+    flex: 1;
+    background-color: #FF9F66;
+    padding: 20px;
+    padding-top: 20px;
+   height: 500px;
+    width: 55%;
+    margin: 3% auto;
+    border-radius: 10px;
+    box-shadow: #616161 2px 2px 5px;
+    
+}
+@media (max-width: 1024px) {
+     .container {
+        height: 540px;
+    }
+}
+@media (max-width:768px) {
+    .container {
+       height: 580px;
+   }
+}
+@media (max-width: 480px) {
+    .container {
+       height: 600px;
+   }
+}
+
+.complete {
+    background: #ff9e66e4;
+    padding-top:100px;
+
+    border-radius: 10px;
+    margin-top:50px;
+    height: 400px;
+    
+  }
+
+h1 {
+    color: #FFFAE6;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.question-text {
+    font-size: 24px;
+    color: #2c3e50;
+    margin: 20px 0;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.question-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 10px auto;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.option {
+    background: #087fb6;
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 24px;
+    border: none;
+    color:  #FFFAE6;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.option:hover {
+    transform: scale(1.05);
+    background: #2eb2ef;
+}
+
+.score {
+    font-size: 28px;
+    color: #074b6a;
+    margin: 20px 0;
+}
+
+.emoji-feedback {
+    font-size: 40px;
+    justify-self: start;
+    margin-right: 35%;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.animal-image {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.option:hover .animal-image {
+    transform: scale(1.05);
+}
+
+#playSound {
+    width: 150px;
+    height: 50px;
+    background-color:#FFA500;
+    font-size: large;
+    border: #FFA500;
+    border-radius: 50px;
+    color: aliceblue;
+}
+
+#playSound:hover {
+    transform: scale(1.05);
+    background-color:#ffc252;
+}
+
+/* 🔥 **جعل التصميم متجاوبًا بدون تغيير شكله الأساسي** */
+@media (max-width: 1024px) {
+    .container {
+        margin-left: 10%;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-left: 5%;
+        max-width: 90%;
+    }
+
+    .options {
+        grid-template-columns: repeat(1, 1fr); /* جعل الأزرار في عمود واحد */
+    }
+
+    .option {
+        font-size: 20px;
+        padding: 15px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .question-text {
+        font-size: 20px;
+    }
+
+    header {
+        height: auto;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+        position: static;
+        transform: none;
+        animation: none;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .question-text {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 95%;
+    }
+
+    .option {
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+
+main {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+aside {
+    width: 0;
+    background-color: #333;
+    color: #fff;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    height: 100vh;
+    position: fixed; /* Fix the sidebar to the left */
+    
+    left: 0;
+    z-index: 100; /* Lower than header */
+}
+
+
+aside.active {
+    width: 15%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    border: #333 solid 3px;
+
+}
+
+nav ul li i {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    visibility: visible;
+    color: #FF5F00;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    visibility: hidden;
+    opacity: 0;
+    margin-left: 10px;
+    font-size: 1rem;
+    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, font-size 0.5s ease-in-out;
+}
+
+aside.active nav ul li a {
+    visibility: visible;
+    opacity: 1;
+    font-size: 1.1rem;
+}
+
+#sidebar nav ul li a:hover {
+    color: bisque;
+}
+
+nav ul li a:hover {
+    color: #FF5F00;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
+.overlay.active {
+    display: block;
+}

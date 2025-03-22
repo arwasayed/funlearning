@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Apple",
+        "image": ""
+    },
+    {
+        "name": "Banana",
+        "image": "imgGame/banana.jpg"
+    },
+    {
+        "name": "Orange",
+        "image": "imgGame/orange.jpg"
+    },
+    {
+        "name": "Grapes",
+        "image": "imgGame/grapes.jpg"
+    },
+    {
+        "name": "Strawberry",
+        "image": "imgGame/strawberry.jpg"
+    },
+    {
+        "name": "Watermelon",
+        "image": "imgGame/watermelon.jpg"
+    },
+    {
+        "name": "Pineapple",
+        "image": "imgGame/pineapple.jpg"
+    },
+    {
+        "name": "Mango",
+        "image": "imgGame/mango.jpg"
+    }
+]

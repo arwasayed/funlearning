@@ -1,0 +1,234 @@
+/* General Styles */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-family: cursive;
+    background-color: #fffae6b5;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+header {
+    background-color: #FF5F00;
+    color: #FFFAE6;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header i.fa-bars {
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+header i.fa-bars:hover {
+    color: #333;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    animation: moveHeading 2s infinite alternate;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes moveHeading {
+    0% {
+        transform: translate(-50%, -50%) translateX(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(20px);
+    }
+}
+
+/* Sidebar Styles */
+aside {
+    width: 0;
+    background-color: #333;
+    color: #fff;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    position: fixed;
+    top: 63px;
+    left: 0;
+    height: 100vh;
+    z-index: 100;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+aside.active {
+    width: 15%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    border: #333 solid 3px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li:hover {
+    background-color: #444;
+}
+
+nav ul li i {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    visibility: visible;
+    color: #FF5F00;
+    transition: color 0.3s ease;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    visibility: hidden;
+    opacity: 0;
+    margin-left: 10px;
+    font-size: 1rem;
+    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, font-size 0.5s ease-in-out;
+}
+
+aside.active nav ul li a {
+    visibility: visible;
+    opacity: 1;
+    font-size: 1.1rem;
+}
+
+#sidebar nav ul li a:hover {
+    color: #FF5F00;
+}
+
+/* Main Content Styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.baby {
+    font-size: xx-large;
+    color: #FF5F00;
+    margin-bottom: 20px;
+}
+
+h1 {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+p {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    animation: slowMotion 4s ease-in-out infinite;
+    margin-bottom: 20px; /* Space between images */
+}
+
+
+input[type="button"] {
+    /* background-color: rgb(0, 124, 128); */
+    background-color: #ff5e00af;
+    color: #FFFAE6;
+    font-size: 1.2em;
+    width: 80px;
+    height: 45px;
+    border: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+input[type="button"]:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+input[type="button"]:active {    
+    background-color: #FF5F00;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slowMotion {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    aside.active {
+        width: 200px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .baby {
+        font-size: x-large;
+    }
+}
