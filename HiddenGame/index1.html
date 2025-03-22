@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="icon" type="image/jpg" href="favicon.jpg">
+        <link rel="stylesheet" href="style.css">
+        <title>Fun Learning</title>
+    </head>
+    <body>
+        <header>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <h1 id="moving-heading">Learn clothes</h1>
+        </header>
+        <main>
+            <aside id="sidebar">
+                <nav>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-house-user"></i>
+                            <a href="../home/home.html">Home</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-seedling"></i>
+                            <a href="../fruit/fruit.html">Fruit </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-child-reaching"></i>
+                            <a href="../BodyGame/HumanBody.html">Body </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-truck-plane"></i>
+                            <a href="../Nada/lesson.html">Vehicles </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-otter"></i>
+                            <a href="../Animal/Leason.html">Animals </a>
+                        </li>
+                        <!-- <li>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <a href="index1.html">Hidden </a>
+                        </li> -->
+                        <li>
+                            <i class="fa-solid fa-address-card"></i>
+                            <a href="../Nada/About.html">About Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="container">
+                <section class="intro">
+                    <div class="clothes-container">
+                        <p>At the begining we will show you the pictures of the
+                            clothes and there name under them to know there
+                            shapes and there names if you click in the photo the
+                            sound will play after you know them you have
+                            to play with us </p>
+                        <p>the play is search in messy room about some colthes
+                            which noted in the list
+                        </p>
+                        <button id="startLessonBtn"
+                            onclick="startLesson()">Start lesson</button>
+                    </div>
+                </section>
+                <section class="hidden lesson">
+                    <div class="clothes-container-info">
+                        <div class="clothes" onclick="playAudio('coat-audio')">
+                            <img src="assests/pngimg.com - coat_PNG17.png"
+                                alt="coat">
+                            <p>Coat</p>
+                        </div>
+                        <div class="clothes"
+                            onclick="playAudio('gloves-audio')">
+                            <img src="assests/pngimg.com - gloves_PNG80287.png"
+                                alt="gloves">
+                            <p>Gloves</p>
+                        </div>
+                        <div class="clothes" onclick="playAudio('hat-audio')">
+                            <img src="assests/pngimg.com - hat_PNG5715.png"
+                                alt="hat">
+                            <p>Hat</p>
+                        </div>
+                        <div class="clothes" onclick="playAudio('dress-audio')">
+                            <img
+                                src="assests/—Pngtree—beautiful red tube top dress_4508160.png"
+                                alt="dress">
+                            <p>Dress</p>
+                        </div>
+                        <div class="clothes"
+                            onclick="playAudio('t-shirt-audio')">
+                            <img
+                                src="assests/—Pngtree—cute light yellow cartoon t-shirt_5676292.png"
+                                alt="t-shirt">
+                            <p>T-shirt</p>
+                        </div>
+                        <div class="clothes" onclick="playAudio('shoes-audio')">
+                            <img
+                                src="assests/—Pngtree—cartoon shoes cartoon girl shoes_3900021.png"
+                                alt="shoes">
+                            <p>Shoes</p>
+                        </div>
+                        <div class="clothes" onclick="playAudio('socks-audio')">
+                            <img
+                                src="assests/—Pngtree—beautiful socks knitted socks socks_3869229.png"
+                                alt="socks">
+                            <p>Socks</p>
+                        </div>
+                    </div>
+                    <audio id="coat-audio"
+                        src="assests/pronunciation_en_coat.mp3"></audio>
+                    <audio id="gloves-audio"
+                        src="assests/pronunciation_en_gloves.mp3"></audio>
+                    <audio id="hat-audio"
+                        src="assests/pronunciation_en_hat.mp3"></audio>
+                    <audio id="dress-audio"
+                        src="assests/pronunciation_en_dress.mp3"></audio>
+                    <audio id="t-shirt-audio"
+                        src="assests/pronunciation_en_t-shirt.mp3"></audio>
+                    <audio id="shoes-audio"
+                        src="assests/pronunciation_en_shoes.mp3"></audio>
+                    <audio id="socks-audio"
+                        src="assests/pronunciation_en_socks.mp3"></audio>
+
+                    <button id="startPlayBtn" onclick="startPlay()">Start
+                        Play</button>
+                </section>
+                <section class="hidden hidden1" id="gamesection">
+                    <div class="gamecontainer">
+                        <div class="item-list">
+                            <h2>Score: <span id="score">0</span></h2>
+                            <h2>Items to Find</h2>
+                            <ul>
+                                <li id="item1">shirt</li>
+                                <li id="item2">dress</li>
+                                <li id="item3">hat</li>
+                                <li id="item4">coat</li>
+                                <li id="item5">Gloves</li>
+                                <li id="item6">Shoes</li>
+                                <li id="item7">Socks</li>
+                            </ul>
+                        </div>
+                        <div class="background">
+                            <img
+                                src="assests/—Pngtree—cute light yellow cartoon t-shirt_5676292.png"
+                                id="item1" class="item-image">
+                            <img
+                                src="./assests/—Pngtree—beautiful red tube top dress_4508160.png"
+                                id="item2" class="item-image">
+                            <img src="./assests/pngimg.com - hat_PNG5715.png"
+                                id="item3" class="item-image"
+                                style="height: 40px;">
+                            <img src="./assests/pngimg.com - coat_PNG17.png"
+                                id="item4" class="item-image">
+                            <img
+                                src="./assests/pngimg.com - gloves_PNG80287.png"
+                                id="item5" class="item-image">
+                            <img
+                                src="./assests/—Pngtree—cartoon shoes cartoon girl shoes_3900021.png"
+                                id="item6" class="item-image">
+                            <img
+                                src="./assests/—Pngtree—beautiful socks knitted socks socks_3869229.png"
+                                id="item7" class="item-image">
+                        </div>
+                        <div class="timer">
+                            <span id="countdown">01:00</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="overlay"></div>
+            <audio id="scoreSound" src="assests/correct.mp3"></audio>
+            <audio id="timerEndSound" src="assests/fail-.mp3"></audio>
+        </main>
+
+        <script src="script1.js"></script>
+    </body>
+</html>
